@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <form
+      name="submit_form"
+      style="display: none"
+      id="submit_form"
+      action="https://ecmap.hilife.com.tw/ecmap.aspx"
+      method="POST"
+    >
+      <input name="VDRNO" type="text" value="160" /><input
+        name="ECNO"
+        type="text"
+        value="001"
+      /><input name="ECDCNO" type="text" value="D11" /><input
+        name="ECCVS"
+        type="text"
+        value="HILIFE"
+      /><input name="ECUSERIP" type="text" value="" /><input
+        name="MAPORDERNO"
+        type="text"
+        value="00000000000"
+      /><input
+        name="RTURL"
+        type="text"
+        value="https://express-vercel-deployment-tau.vercel.app"
+      /><input name="ECTEMP" type="text" value="" /><input
+        name="DEVICE"
+        type="text"
+        value="0"
+      />
+    </form>
+    <script type="text/javascript">
+      document.submit_form.submit();
+    </script>
+  </body>
+</html>
