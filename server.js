@@ -8,12 +8,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // sendFile will go here
 app.get('/select-store', function(req, res) {
-  if (req.store === "hilife") {
+  if (req.params.store === "hilife") {
       res.sendFile(path.join(__dirname, '/hilife.html'));
-  } else if (req.store === "family") {
+  } else if (req.paramsstore === "family") {
      res.sendFile(path.join(__dirname, '/family.html'));
-  } else if (req.store === "7-11") {
-     res.sendFile(path.join(__dirname, '/7-11.html'));
+  } else if (req.paramsstore === "7-11") {
+     res.sendFile(path.join(__dirname, '/711.html'));
   } else {
     res.send(`需選擇任一超商物流`);
   }
