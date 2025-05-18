@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 
 const port = process.env.PORT || 8080;
-app.use(express.json());
+// Parse URL-encoded form data (from POST like `application/x-www-form-urlencoded`)
+app.use(express.urlencoded({ extended: true }));
 
 app.post('/', (req, res) => {
   const { ECCVS, price } = req.body;
@@ -10,7 +11,7 @@ app.post('/', (req, res) => {
   console.log('Product Name:', ECCVS);
   console.log('Product Price:', price);
 
-  res.send(`Received product: ${ECCVS} at ${req.body.text()}`);
+  res.send(`Received product: ${ECCVS} at ${req.body}`);
 });
 
 app.listen(port, () => {
