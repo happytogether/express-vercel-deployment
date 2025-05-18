@@ -4,13 +4,13 @@ const app = express();
 const port = process.env.PORT || 8080;
 app.use(express.json());
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
   const { ECCVS, price } = req.body;
 
   console.log('Product Name:', ECCVS);
   console.log('Product Price:', price);
 
-  res.send(`Received product: ${req.body`);
+  res.send(`Received product: ${ECCVS} at ${req.body`);
 });
 
 app.listen(port, () => {
