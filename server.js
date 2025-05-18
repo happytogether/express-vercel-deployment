@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   console.log('Product Name:', ECCVS);
   console.log('Product Price:', price);
 
-  res.send(`Received product: ${ECCVS} at ${req.body`);
+  res.send(`Received product: ${ECCVS} at ${req.body}`);
 });
 
 app.listen(port, () => {
