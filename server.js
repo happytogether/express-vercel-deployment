@@ -15,7 +15,7 @@ app.get('/select-store', function(req, res) {
   } else if (req.paramsstore === "7-11") {
      res.sendFile(path.join(__dirname, '/711.html'));
   } else {
-    res.send(`需選擇任一超商物流`);
+    res.send(`沒有提供超商物流`);
   }
 });
 
