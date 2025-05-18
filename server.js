@@ -6,12 +6,10 @@ const port = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/', (req, res) => {
-  const { ECCVS, price } = req.body;
+  console.log('Full body:', req.body);             // Prints the whole object
+  console.log('ECCVS value:', req.body.ECCVS);     // Access specific value
 
-  console.log('Product Name:', ECCVS);
-  console.log('Product Price:', price);
-
-  res.send(`Received product: ${ECCVS} at ${req.body}`);
+  res.send(`Got ECCVS: ${req.body.ECCVS}`);
 });
 
 app.listen(port, () => {
