@@ -4,34 +4,14 @@
     <title>Page Title</title>
   </head>
   <body>
-    <form
-      name="submit_form"
-      style="display: none"
-      id="submit_form"
-      action="https://ecmap.hilife.com.tw/ecmap.aspx"
-      method="POST"
-    >
-      <input name="VDRNO" type="text" value="160" /><input
-        name="ECNO"
-        type="text"
-        value="001"
-      /><input name="ECDCNO" type="text" value="D11" /><input
-        name="ECCVS"
-        type="text"
-        value="HILIFE"
-      /><input name="ECUSERIP" type="text" value="" /><input
-        name="MAPORDERNO"
-        type="text"
-        value="00000000000"
-      /><input
-        name="RTURL"
-        type="text"
-        value="https://express-vercel-deployment-tau.vercel.app"
-      /><input name="ECTEMP" type="text" value="" /><input
-        name="DEVICE"
-        type="text"
-        value="0"
-      />
+    <form name='submit_form' style='display:none' id='submit_form' action='https://ec.shopping7.com.tw/ec3gmap/emap/eServiceMap.php' method='POST'>
+      <input name='uid' type='text' value='829'/>
+      <input name='eshopid' type='text' value='U00'/>
+      <input name='servicetype' type='text' value='1'/>
+      <input name='url' type='text' value='https://express-vercel-deployment-tau.vercel.app'/>
+      <input name='display' type='text' value='page'/>
+      <input name='hasoutside' type='text' value='1'/>
+      <input name='charset' type='text' value='utf-8'/>
     </form>
     <script type="text/javascript">
       document.submit_form.submit();
