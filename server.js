@@ -12,7 +12,7 @@ app.get('/select-store', function(req, res) {
       res.sendFile(path.join(__dirname, '/hilife.html'));
   } else if (req.query.store === "family") {
      res.sendFile(path.join(__dirname, '/family.html'));
-  } else if (req.query.store === "7-11") {
+  } else if (req.query.store === "711") {
      res.sendFile(path.join(__dirname, '/711.html'));
   } else {
     res.send(`沒有提供超商物流`);
