@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
   const { ECCVS, price } = req.body;
 
   console.log('Product Name:', ECCVS);
