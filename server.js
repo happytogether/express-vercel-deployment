@@ -23,9 +23,15 @@ app.get('/select-store', function(req, res) {
 app.post('/', (req, res) => {
   console.log('Full body:', req.body);             // Prints the whole object
   console.log('ECCVS value:', req.body.ECCVS);     // Access specific value
+  if(req.body.ECCVS) {
+      res.send(`Got ECCVS: ${req.body.ECCVS}`);
 
-  res.send(`Got ECCVS: ${req.body.ECCVS}`);
-  res.send( `Got eshopid: ${req.body.eshopid}`);
+  } else if(req.body.eshopid) {
+      res.send( `Got eshopid: ${req.body.eshopid}`);
+
+  } else {
+    res.send( `Got eshopid: family`);
+  }
 });
 
 app.listen(port, () => {
