@@ -25,6 +25,7 @@ app.post('/', (req, res) => {
   console.log('ECCVS value:', req.body.ECCVS);     // Access specific value
 
   res.send(`Got ECCVS: ${req.body.ECCVS}`);
+  res.send( `Got eshopid: ${req.body.eshopid}`);
 });
 
 app.listen(port, () => {
