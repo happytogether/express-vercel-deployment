@@ -27,7 +27,7 @@ app.post('/', (req, res) => {
       //res.send(`Got ECCVS: ${req.body.ECCVS}`);
     
   } else {
-      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=seven_eleven&store_id=${req.body.storeid}&store_name=${req.body.storename}&store_address=${req.body.storeaddress}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
+      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=seven_eleven&store_id=${req.body.storeid}&store_name=${req.body.storename}&store_address=${req.body.address}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
   }
 });
 
