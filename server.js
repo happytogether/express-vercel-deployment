@@ -26,12 +26,8 @@ app.post('/', (req, res) => {
   if(req.body.ECCVS) {
       //res.send(`Got ECCVS: ${req.body.ECCVS}`);
     
-  } else if(req.body.eshopid) {
-      //res.send( `Got eshopid: ${req.body.eshopid}`);
-      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=seven_eleven&store_id=${req.body.storeid}&store_name=${req.body.storename}&store_address=${req.body.storeaddress}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
-
   } else {
-    res.send( `Got eshopid: family`);
+      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=seven_eleven&store_id=${req.body.storeid}&store_name=${req.body.storename}&store_address=${req.body.storeaddress}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
   }
 });
 
