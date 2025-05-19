@@ -25,10 +25,10 @@ app.post('/', (req, res) => {
   console.log('ECCVS value:', req.body.ECCVS);     // Access specific value
   if(req.body.ECCVS) {
       //res.send(`Got ECCVS: ${req.body.ECCVS}`);
-      res.redirect('https://teacherguo.myshopify.com/cart?callback_data=&store_type=seven_eleven&store_id=264211&store_name=%E4%B8%89%E7%94%B0%E9%96%80%E5%B8%82&store_address=%28%E8%B6%85%E5%95%86%29%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E7%A6%8F%E7%94%B0%E9%87%8C%E4%B8%89%E6%B0%91%E8%A1%97274%E8%99%9F276%E8%99%9F1%E6%A8%93&store_zip=&store_longitude=&store_latitude=&store_remark=');
-
+    
   } else if(req.body.eshopid) {
-      res.send( `Got eshopid: ${req.body.eshopid}`);
+      //res.send( `Got eshopid: ${req.body.eshopid}`);
+      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=seven_eleven&store_id=${req.body.storeid}&store_name=${req.body.storename}&store_address=${req.body.storeaddress}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
 
   } else {
     res.send( `Got eshopid: family`);
