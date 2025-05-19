@@ -25,9 +25,11 @@ app.post('/', (req, res) => {
   console.log('ECCVS value:', req.body.ECCVS);     // Access specific value
   if(req.body.ECCVS) {
       //res.send(`Got ECCVS: ${req.body.ECCVS}`);
-    
+      //SHOPNA
+      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=hilife&store_id=${req.body.SHOPID}&store_name=${req.body.SHOPNA}&store_address=${req.body.SHOPADDR}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
+
   } else {
-      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=seven_eleven&store_id=${req.body.storeid}&store_name=${req.body.storename}&store_address=${req.body.address}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
+      res.redirect(`https://teacherguo.myshopify.com/cart?callback_data=&store_type=711&store_id=${req.body.storeid}&store_name=${req.body.storename}&store_address=${req.body.address}&store_zip=&store_longitude=&store_latitude=&store_remark=`);
   }
 });
 
